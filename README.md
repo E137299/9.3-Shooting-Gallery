@@ -32,7 +32,8 @@ In this lab, you will create a game using the Turtle graphics module. The game w
 
 ### 5. Implement the game logic
 - Create a screen object and set up the game window.
-- Create and draw the game border and blocks.
+- Create and draw the game border.
+- Create three rows of blocks at the top of the playing area.
 - Create player objects and bind their controls to key presses.
 - Implement a game loop to handle bullet movement, block strikes, and score updates.
 
