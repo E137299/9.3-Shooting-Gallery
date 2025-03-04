@@ -27,22 +27,44 @@ Create a game where two players control "turtles" at the bottom of the screen an
 2.  **Class Implementations:**
 
     * **`Block` Class:**
-        * Attributes: color, position, hit count, hit colors (initial, orange, red).
+        * Attributes:
+           * color
+           * position,
+           * hit count
+           * hit colors - initial, orange, red 
         * Methods:
-           *    `delete()` (removes the block)
-           *    `strike()` (handles a bullet hit, updates color, and increments hit count).
+           *    `delete()` - removes the block
+           *    `strike()` - handles a bullet hit, updates color, and increments hit count
 
     * **`Player` Class:**
-        * Attributes: color, position, score, controls (keys for movement and firing), list of active bullets.
-        * Methods: `turn_right()`, `turn_left()` (handles player movement), `fire()` (creates and fires a bullet, ensuring the bullet limit).
+        * Attributes:
+           * color
+           * position
+           * score
+           * controls (keys for movement and firing)
+           * list of active bullets
+        * Methods:
+           * `turn_right()`
+           * `turn_left()` - handles player movement
+           * `fire()` - creates and fires a bullet, ensuring the bullet limit
 
     * **`Bullet` Class:**
-        * Attributes: color, position, player who fired the bullet.
-        * Methods: `move()` (handles bullet movement), `delete()` (removes the bullet).
+        * Attributes:
+           * color
+           * position
+           * player who fired the bullet
+           * heading
+        * Methods:
+           * `move()` - handles bullet movement
+           * `delete()` - removes the bullet
 
     * **`Score` Class:**
-        * Attributes: position, player associated with the score.
-        * Methods: `clear_score()` (clears the displayed score), `update_score()` (updates and displays the score).
+        * Attributes:
+           * position
+           * player associated with the score.
+        * Methods:
+           * `clear_score()` - clears the displayed score
+           * `update_score()` - updates and displays the score
 
 3.  **Game Logic:**
 
