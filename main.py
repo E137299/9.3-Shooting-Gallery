@@ -5,7 +5,7 @@ import random
 ##### FUNCTIONS AND CLASS DEFINITIONS ############
 class Block(Turtle):
   pass
-	# Constructor
+  # Constructor
 
   # delete() - responsible for hiding and removing the block from the list of blocks
 
@@ -15,9 +15,9 @@ class Block(Turtle):
 
 class Player(Turtle):
   pass
-	# Constructor 
+  # Constructor 
 	
-	# turn_right() - rotates the player right
+  # turn_right() - rotates the player right
 
   # turn_left() - rotates the player left
 	
@@ -27,7 +27,7 @@ class Player(Turtle):
 
 class Bullet(Turtle):
   pass
-	# Constructor
+  # Constructor
 
   # move() - moves the bullet forward, reflects the bullet off the side of the playing area, deletes the bullet if it leaves the top of the playing area
 	
@@ -35,7 +35,7 @@ class Bullet(Turtle):
 
 class Score(Turtle):
   pass
-	# Constructor
+  # Constructor
 
   # clear_score() - clears the previous score before a new score is displayed
 
