@@ -4,49 +4,73 @@ In this lab, you will create a game using the Turtle graphics module. The game w
 
 ![Shooting Gallery](shootinggallery.png)
 
-## Game Description
+**Game Description:**
 
-1. Write a Python program that uses the Turtle graphics module to create a game where players shoot bullets to hit blocks.
-2. Use classes to define the different objects in the game: Block, Player, Bullet, and Score.
-3. Implement the game logic to handle player movements, bullet firing, block hitting, and score updates.
+Create a game where two players control "turtles" at the bottom of the screen and shoot "bullets" upwards to destroy "blocks" at the top.
 
-## Implement the Game
+* **Playing Area:** The game area is a rectangle with dimensions 220 x 400 pixels.
+* **Blocks:** Three rows of blocks are positioned at the top of the game area.
+* **Players:** Two players are positioned at the bottom, each controlling a "turtle" that can move left and right and fire bullets.
+* **Bullets:** Each player can fire up to five bullets at a time. Bullets move upwards and are removed when they hit a block or reach the top of the screen.
+* **Block Hits:** Blocks change color when hit: their initial color, then orange, then red. After three hits, a block is destroyed.
+* **Scoring:** Each player earns a point for destroying a block. Scores are displayed on the screen.
 
-### 1. Define the Block class
-- Create a Block class that inherits from the Turtle class.
-- Define the characteristics of a block (color, position, hit colors, and hit count).
-- Implement methods to handle block deletion and strikes.
+**Implementation Requirements:**
 
-### 2. Define the Player class
-- Create a Player class that inherits from the Turtle class.
-- Define the characteristics of a player (color, position, score, and controls).
-- Implement methods to handle player movements and bullet firing.
+1.  **Object-Oriented Design:**
+    * Create the following classes, each inheriting from the `turtle.Turtle` class:
+        * `Block`: Represents a block in the game.
+        * `Player`: Represents a player and their "turtle."
+        * `Bullet`: Represents a bullet fired by a player.
+        * `Score`: Represents the score display.
 
-### 3. Define the Bullet class
-- Create a Bullet class that inherits from the Turtle class.
-- Define the characteristics of a bullet (color, position, and movement).
-- Implement methods to handle bullet movement and deletion.
+2.  **Class Implementations:**
 
-### 4. Define the Score class
-- Create a Score class that inherits from the Turtle class.
-- Define the characteristics of the score display (position and player score).
-- Implement methods to update and clear the score.
+    * **`Block` Class:**
+        * Attributes: color, position, hit count, hit colors (initial, orange, red).
+        * Methods: `delete()` (removes the block), `strike()` (handles a bullet hit, updates color, and increments hit count).
 
-### 5. Implement the game logic
-- Create a screen object and set up the game window.
-- Create and draw the game border.
-- Create three rows of blocks at the top of the playing area.
-- Create player objects and bind their controls to key presses.
-- Implement a game loop to handle bullet movement, block strikes, and score updates.
+    * **`Player` Class:**
+        * Attributes: color, position, score, controls (keys for movement and firing), list of active bullets.
+        * Methods: `turn_right()`, `turn_left()` (handles player movement), `fire()` (creates and fires a bullet, ensuring the bullet limit).
 
-## Rubric:
+    * **`Bullet` Class:**
+        * Attributes: color, position, player who fired the bullet.
+        * Methods: `move()` (handles bullet movement), `delete()` (removes the bullet).
 
-|Description| Points |
-|---|---|
-|Correctly implements the Block class|3|
-|Correctly implements the Player class|3|
-|Correctly implements the Bullet class|3|
-|Correctly implements the Score class|3|
-|Implements game logic and loop|8|
-|**TOTAL POINTS**|**20**|
+    * **`Score` Class:**
+        * Attributes: position, player associated with the score.
+        * Methods: `clear_score()` (clears the displayed score), `update_score()` (updates and displays the score).
+
+3.  **Game Logic:**
+
+    * Initialize the game screen and draw the game border.
+    * Create and place the blocks, players, and score displays.
+    * Implement event handling for player controls (key presses).
+    * Implement a game loop that:
+        * Moves bullets.
+        * Checks for bullet-block collisions.
+        * Updates block states and scores.
+        * Removes bullets that hit blocks or reach the top.
+        * Updates the screen.
+
+4.  **Game Constraints:**
+
+    * The playing area must be 220 x 400 pixels.
+    * Place three rows of blocks at the top of the screen.
+    * Players must be at the bottom of the screen.
+    * Players can only have 5 bullets active at a time.
+    * Blocks must change color, and then be deleted after three hits.
+
+**Rubric:**
+
+| Description                               | Points |
+| :----------------------------------------- | :----- |
+| Correct `Block` class implementation       | 4      |
+| Correct `Player` class implementation      | 4      |
+| Correct `Bullet` class implementation      | 2      |
+| Correct `Score` class implementation      | 2      |
+| Game logic and game loop implementation   | 8      |
+| **Total Points** | **10** |
+
 
