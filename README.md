@@ -2,6 +2,8 @@
 
 In this lab, you will create a game using the Turtle graphics module. The game will involve blocks, players, bullets, and score updates.
 
+![Shooting Gallery](shootinggallery.png)
+
 ## Game Description
 
 1. Write a Python program that uses the Turtle graphics module to create a game where players shoot bullets to hit blocks.
