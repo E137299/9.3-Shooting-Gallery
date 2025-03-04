@@ -29,8 +29,8 @@ Create a game where two players control "turtles" at the bottom of the screen an
     * **`Block` Class:**
         * Attributes: color, position, hit count, hit colors (initial, orange, red).
         * Methods:
-        *    `delete()` (removes the block)
-        *    `strike()` (handles a bullet hit, updates color, and increments hit count).
+           *    `delete()` (removes the block)
+           *    `strike()` (handles a bullet hit, updates color, and increments hit count).
 
     * **`Player` Class:**
         * Attributes: color, position, score, controls (keys for movement and firing), list of active bullets.
